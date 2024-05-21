@@ -1,3 +1,4 @@
+local map = vim.keymap.set
 -- Yeet x to black hole register.
 vim.keymap.set({ 'n', 'v' }, 'x', '"_x')
 
@@ -25,3 +26,12 @@ vim.keymap.set('n', '<leader>xx', vim.diagnostic.setloclist, { desc = 'Open diag
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+map('n', '<leader>ww', '<C-W>p', { desc = 'Other Window', remap = true })
+map('n', '<leader>wd', '<C-W>c', { desc = 'Delete Window', remap = true })
+map('n', '<leader>wx', '<C-W>s', { desc = 'Split Window Below', remap = true })
+map('n', '<leader>wv', '<C-W>v', { desc = 'Split Window Right', remap = true })
+map('n', '<C-h>', '<C-w>h', { desc = 'Go to Left Window', remap = true })
+map('n', '<C-j>', '<C-w>j', { desc = 'Go to Lower Window', remap = true })
+map('n', '<C-k>', '<C-w>k', { desc = 'Go to Upper Window', remap = true })
+map('n', '<C-l>', '<C-w>l', { desc = 'Go to Right Window', remap = true })
