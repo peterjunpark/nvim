@@ -10,6 +10,9 @@ return {
     --  - yinq - [Y]ank [I]nside [N]ext [']quote
     --  - ci'  - [C]hange [I]nside [']quote
 
+    -- NOTE: Animate common movements.
+    require('mini.animate').setup()
+
     -- NOTE: Remove buffers while saving window layout.
     require('mini.bufremove').setup()
 
@@ -32,6 +35,7 @@ return {
         starter_section('Grep text', 'Telescope live_grep', 'Telescope'),
         starter_section('Lazy', 'Lazy', 'Config'),
         starter_section('Mason', 'Mason', 'Config'),
+        starter_section('Quit', 'qa', ''),
       },
       footer = '',
       content_hooks = {

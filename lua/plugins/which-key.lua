@@ -11,6 +11,7 @@ return {
       ['<leader>l'] = { name = 'LSP', _ = 'which_key_ignore' },
       ['<leader>f'] = { name = 'Find', _ = 'which_key_ignore' },
       ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
+      ['<leader><Tab>'] = {name = 'Tab', _ = 'which_key_ignore'},
       ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
       ['<leader>p'] = { name = 'Project', _ = 'which_key_ignore' },
       ['<leader>w'] = { name = 'Window', _ = 'which_key_ignore' },
