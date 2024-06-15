@@ -36,7 +36,7 @@ require('lazy').setup({
   { import = 'plugins' },
 }, {
   install = {
-    colorscheme = { 'rose-pine', 'vim', 'habamax' },
+    colorscheme = { 'rose-pine', 'default' },
   },
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

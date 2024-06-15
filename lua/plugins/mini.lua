@@ -16,9 +16,6 @@ return {
     -- NOTE: Remove buffers while saving window layout.
     require('mini.bufremove').setup()
 
-    -- NOTE: Autopair brackets, quotes, etc.
-    require('mini.pairs').setup()
-
     -- NOTE: Start screen.
     local starter = require 'mini.starter'
     local starter_section = function(name, action, section)
@@ -43,6 +40,9 @@ return {
         starter.gen_hook.aligning('center', 'center'),
       },
     }
+
+    -- NOTE: Statusline
+    require('mini.statusline').setup()
 
     -- NOTE: Quickly edit surroundings (brackets, quotes, etc.).
     require('mini.surround').setup()
