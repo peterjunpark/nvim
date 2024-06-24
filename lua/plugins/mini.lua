@@ -10,7 +10,7 @@ return {
     --  - yinq - [Y]ank [I]nside [N]ext [']quote
     --  - ci'  - [C]hange [I]nside [']quote
 
-    -- NOTE: Animate common movements.
+    -- NOTE: Animate common movements
     require('mini.animate').setup()
 
     -- NOTE: Remove buffers while saving window layout.
@@ -43,6 +43,9 @@ return {
 
     -- NOTE: Statusline
     require('mini.statusline').setup()
+
+    -- NOTE: See trailing spaces
+    require('mini.trailspace').setup()
 
     -- NOTE: Quickly edit surroundings (brackets, quotes, etc.).
     require('mini.surround').setup()
