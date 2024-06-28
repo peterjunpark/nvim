@@ -1,5 +1,6 @@
 -- Make Neovim look good.
 return {
+  {
   'catppuccin/nvim',
   name = 'catppuccin',
   lazy = false,
@@ -27,4 +28,5 @@ return {
   init = function()
     vim.cmd.colorscheme 'catppuccin'
   end,
+  },
 }

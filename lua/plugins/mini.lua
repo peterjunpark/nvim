@@ -41,9 +41,6 @@ return {
       },
     }
 
-    -- NOTE: Statusline
-    require('mini.statusline').setup()
-
     -- NOTE: See trailing spaces
     require('mini.trailspace').setup()
 

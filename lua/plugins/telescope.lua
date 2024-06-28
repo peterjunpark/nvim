@@ -90,14 +90,14 @@ return {
 
     -- It's also possible to pass additional configuration options.
     --  See `:help telescope.builtin.live_grep()` for information about particular keys
-    vim.keymap.set('n', '<leader>fg', function()
-      builtin.live_grep {
-        grep_open_files = true,
-        prompt_title = 'Live Grep in Open Files',
-      }
-    end, { desc = 'Live grep in open files' })
+    -- vim.keymap.set('n', '<leader>fg', function()
+    --   builtin.live_grep {
+    --     grep_open_files = true,
+    --     prompt_title = 'Live Grep in Open Files',
+    --   }
+    -- end, { desc = 'Live grep in open files' })
 
-    vim.keymap.set('n', '<leader>fG', builtin.live_grep, { desc = 'Live grep' })
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live grep' })
 
     -- Shortcut for searching your Neovim configuration files
     vim.keymap.set('n', '<leader>fc', function()
