@@ -54,7 +54,7 @@ return {
       --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
       --   },
       -- },
-      -- pickers = {}
+      pickers = {},
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
@@ -69,12 +69,20 @@ return {
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Buffers' })
-    vim.keymap.set('n', '<leader>ff', function() builtin.find_files { prompt_title = 'Files' } end, { desc = 'Files' })
+    vim.keymap.set('n', '<leader>ff', function()
+      builtin.find_files { prompt_title = 'Files' }
+    end, { desc = 'Files' })
     vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = 'Quickfix list' })
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Help tags' })
-    vim.keymap.set('n', '<leader>fk', function() builtin.keymaps { prompt_title = 'Keymaps' } end, { desc = 'Keymaps' })
-    vim.keymap.set('n', '<leader>fp', function() builtin.builtin { prompt_title = 'Pickers'} end, { desc = 'Telescope pickers' })
-    vim.keymap.set('n', '<leader>fw', function() builtin.grep_string { prompt_title = 'Grep string'} end, { desc = 'Current word' })
+    vim.keymap.set('n', '<leader>fk', function()
+      builtin.keymaps { prompt_title = 'Keymaps' }
+    end, { desc = 'Keymaps' })
+    vim.keymap.set('n', '<leader>fp', function()
+      builtin.builtin { prompt_title = 'Pickers' }
+    end, { desc = 'Telescope pickers' })
+    vim.keymap.set('n', '<leader>fw', function()
+      builtin.grep_string { prompt_title = 'Grep string' }
+    end, { desc = 'Current word' })
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Diagnostics' })
     vim.keymap.set('n', '<leader>f.', builtin.resume, { desc = 'Resume search' })
     vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Oldfiles' })

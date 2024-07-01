@@ -17,9 +17,10 @@
 ========                                                     ========
 =====================================================================
 ===================================================================]]
-require 'opts'
-require 'keymaps'
-require 'autocmds'
+require 'my.opts'
+require 'my.keymaps'
+require 'my.autocmds'
+require 'my.globals'
 
 -- NOTE: Install `lazy.nvim` plugin manager
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -33,10 +34,13 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- See `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  { import = 'plugins' },
+  spec = {
+    { import = 'my.plugins' },
+    { import = 'testicles.plugins' },
+  },
 }, {
   install = {
-    colorscheme = { 'rose-pine', 'default' },
+    colorscheme = { 'catppuccin', 'default' },
   },
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

@@ -41,8 +41,7 @@ return {
       },
     }
 
-    -- NOTE: See trailing spaces
-    require('mini.trailspace').setup()
+    require('mini.statusline').setup()
 
     -- NOTE: Quickly edit surroundings (brackets, quotes, etc.).
     require('mini.surround').setup()
