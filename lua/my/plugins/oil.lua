@@ -46,7 +46,7 @@ return {
       },
     }
     vim.keymap.set('n', '<leader>e', oil.toggle_float, { desc = 'Oil' })
-    vim.keymap.set('n', '<C-w>e', function()
+    vim.keymap.set('n', '<leader>we', function()
       vim.cmd 'vsplit | wincmd l'
       oil.open()
     end, { desc = 'Oil' })

@@ -40,11 +40,9 @@ return {
         starter.gen_hook.aligning('center', 'center'),
       },
     }
-
-    require('mini.statusline').setup()
-
-    -- NOTE: Quickly edit surroundings (brackets, quotes, etc.).
-    require('mini.surround').setup()
+    --
+    -- -- NOTE: Quickly edit surroundings (brackets, quotes, etc.).
+    -- require('mini.surround').setup()
 
     -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
     -- - sd'   - [S]urround [D]elete [']quotes
