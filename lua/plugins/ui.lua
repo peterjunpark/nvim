@@ -1,5 +1,28 @@
 return {
 	{
+		"echasnovski/mini.colors",
+		version = false,
+		opts = {},
+	},
+	{
+		"folke/tokyonight.nvim",
+		opts = {},
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		opts = {
+			flavour = "mocha",
+			styles = {
+				conditionals = {},
+			},
+		},
+		config = function(_, opts)
+			require("catppuccin").setup(opts)
+			vim.cmd.colorscheme "catppuccin"
+		end,
+	},
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		priority = 1000,
@@ -33,6 +56,15 @@ return {
 	{
 		"echasnovski/mini.icons",
 		version = false,
+		opts = {},
+	},
+	{
+		"echasnovski/mini.notify",
+		version = false,
+		opts = {},
+	},
+	{
+		"akinsho/bufferline.nvim",
 		opts = {},
 	},
 }

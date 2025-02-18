@@ -28,6 +28,15 @@ return {
 		end,
 	},
 	{
+		"echasnovski/mini.indentscope",
+		version = false,
+		opts = {
+			options = {
+				try_as_border = true,
+			},
+		},
+	},
+	{
 		"rachartier/tiny-inline-diagnostic.nvim",
 		config = function()
 			require("tiny-inline-diagnostic").setup()
