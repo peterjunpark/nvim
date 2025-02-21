@@ -5,7 +5,7 @@ return {
 			{ "williamboman/mason.nvim", opts = {} },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			{ "echasnovski/mini.extra", version = false, opts = {} },
+			"mini.extra"
 		},
 		config = function()
 			vim.api.nvim_create_autocmd("LspAttach", {

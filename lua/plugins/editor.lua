@@ -1,3 +1,5 @@
+local icons = require "icons"
+
 return {
 	{
 		"echasnovski/mini.surround",
@@ -40,7 +42,17 @@ return {
 		"rachartier/tiny-inline-diagnostic.nvim",
 		config = function()
 			require("tiny-inline-diagnostic").setup()
-			vim.diagnostic.config { virtual_text = false }
+			vim.diagnostic.config {
+				virtual_text = false,
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+						[vim.diagnostic.severity.WARN] = icons.diagnostics.Warn,
+						[vim.diagnostic.severity.INFO] = icons.diagnostics.Info,
+						[vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
+					},
+				},
+			}
 		end,
 	},
 }
