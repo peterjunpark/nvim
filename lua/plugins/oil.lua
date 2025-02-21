@@ -2,7 +2,7 @@ return {
 	"stevearc/oil.nvim",
 	keys = { "<leader>e" },
 	dependencies = {
-		"mini.icons"
+		"mini.icons",
 	},
 	config = function()
 		local oil = require "oil"
@@ -51,6 +51,9 @@ return {
 				["g."] = "actions.toggle_hidden",
 				["g\\"] = "actions.toggle_trash",
 			},
+			float = {
+				border = "single",
+			},
 			confirmation = {
 				border = "single",
 			},
@@ -62,6 +65,6 @@ return {
 			},
 		}
 
-		vim.keymap.set("n", "<leader>e", oil.open, { desc = "Oil: Current dir" })
+		vim.keymap.set("n", "<leader>e", oil.toggle_float, { desc = "Oil: Current dir" })
 	end,
 }

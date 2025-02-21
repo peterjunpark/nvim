@@ -15,8 +15,8 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 vim.opt.scrolloff = 4
-
-vim.opt.conceallevel = 2
+--
+-- vim.opt.conceallevel = 2
 
 -- Global statusline
 vim.opt.laststatus = 3

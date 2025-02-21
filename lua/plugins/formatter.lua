@@ -22,6 +22,7 @@ return {
 			typescriptreact = { "prettier" },
 			typescript = { "prettier" },
 			lua = { "stylua" },
+			python = { "black" },
 			go = { "goimports", "gofmt" },
 			fish = { "fish_indent" },
 			sh = { "shfmt" },

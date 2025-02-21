@@ -15,10 +15,10 @@ return {
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "branch" },
-			lualine_c = {},
+			lualine_c = { "vim.fn.getcwd():gsub('^' .. os.getenv 'HOME', '~') .. '/'" },
 			lualine_x = {},
-			lualine_y = { "progress" },
-			lualine_z = { "location" },
+			lualine_y = { { "buffers", symbols = { alternate_file = "" } } },
+			lualine_z = { "progress", "location" },
 		},
 		inactive_sections = {},
 		winbar = {
@@ -44,8 +44,13 @@ return {
 				},
 			},
 			lualine_x = {
-				{ "filename", path = 1 },
-				{ "filetype", icon_only = true },
+				{ "filetype", icon_only = true, padding = 0 },
+				{
+					"filename",
+					path = 1,
+					padding = 0,
+					symbols = { modified = "●" },
+				},
 			},
 			lualine_y = {},
 			lualine_z = {},
@@ -74,11 +79,13 @@ return {
 					},
 				},
 			},
-			lualine_x = { { "filename", path = 1 } },
+			lualine_x = {
+				{ "filetype", icon_only = true, colored = false, padding = 0 },
+				{ "filename", path = 1, padding = 0, symbols = { modified = "●" } },
+			},
 			lualine_y = {},
 			lualine_z = {},
 		},
-		-- extensions = { "lazy", "mason", "oil" },
 	},
 	config = function(_, opts)
 		MiniIcons.mock_nvim_web_devicons()

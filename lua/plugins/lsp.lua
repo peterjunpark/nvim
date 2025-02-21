@@ -2,7 +2,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "williamboman/mason.nvim", opts = {} },
+			{ "williamboman/mason.nvim", opts = { ui = { border = "single" } } },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"mini.extra",
@@ -147,6 +147,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				-- "gofumpt", -- Stricter gofmt
 				-- "goimports", -- Sort imports in Go files
+				"black",
 				"stylua", -- Used to format Lua code
 			})
 			require("mason-tool-installer").setup { ensure_installed = ensure_installed }
