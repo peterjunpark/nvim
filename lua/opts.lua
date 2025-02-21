@@ -16,7 +16,10 @@ vim.opt.mouse = "a"
 
 vim.opt.scrolloff = 4
 
--- vim.opt.conceallevel = 2
+vim.opt.conceallevel = 2
+
+-- Global statusline
+vim.opt.laststatus = 3
 
 -- Don't show the mode, since it's already in the statusline
 vim.opt.showmode = false

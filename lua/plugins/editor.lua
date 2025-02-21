@@ -39,6 +39,11 @@ return {
 		},
 	},
 	{
+		"echasnovski/mini.map",
+		version = false,
+		opts = {},
+	},
+	{
 		"rachartier/tiny-inline-diagnostic.nvim",
 		config = function()
 			require("tiny-inline-diagnostic").setup()

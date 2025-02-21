@@ -27,6 +27,7 @@ local ensure_installed = {
 	"regex",
 	"rst",
 	"ruby",
+	"rust",
 	"sql",
 	"svelte",
 	"toml",

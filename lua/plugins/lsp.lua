@@ -5,7 +5,7 @@ return {
 			{ "williamboman/mason.nvim", opts = {} },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			"mini.extra"
+			"mini.extra",
 		},
 		config = function()
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -96,12 +96,13 @@ return {
 			})
 			local nvim_lsp = require "lspconfig"
 			local servers = {
-				ols = {
-					-- capabilities = capabilities,
-					init_options = {
-						checker_args = "-strict-style",
-					},
-				},
+				rust_analyzer = {},
+				-- ols = {
+				-- 	-- capabilities = capabilities,
+				-- 	init_options = {
+				-- 		checker_args = "-strict-style",
+				-- 	},
+				-- },
 				clangd = {},
 				cssls = {},
 				esbonio = {},

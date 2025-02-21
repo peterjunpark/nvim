@@ -19,8 +19,7 @@ map("<Tab>", "<cmd>bnext<CR>")
 map("<Backspace>", "<cmd>bprev<CR>")
 
 -- Cycle through tabs.
-map("<leader><Tab>", "<cmd>bnext<CR>")
-map("<leader><Backspace>", "<cmd>bprev<CR>")
+
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`

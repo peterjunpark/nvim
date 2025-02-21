@@ -4,6 +4,7 @@ return {
 		version = false,
 	-- stylua: ignore
 	keys = {
+		{ "<leader><space>", function() MiniPick.builtin.buffers() end, desc = "Pick: Buffers" },
 		{ "<leader>f", function() MiniPick.builtin.files() end, desc = "Pick: Files" },
 		{ "<leader>F", function() MiniExtra.pickers.oldfiles() end, desc = "Pick: Oldfiles" },
 		{ "<leader>/", function() MiniPick.builtin.grep_live() end, desc = "Pick: Grep" },
