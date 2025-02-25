@@ -18,8 +18,7 @@ map("K", ":m '<-2<CR>gv=gv", "Move line up", "v")
 map("<Tab>", "<cmd>bnext<CR>")
 map("<Backspace>", "<cmd>bprev<CR>")
 
--- Cycle through tabs.
-
+map("g/", "<Esc>/\\%V", "Search inside selection", "x")
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -35,11 +34,6 @@ map("<leader>t", function()
 	vim.cmd.wincmd "J"
 	vim.api.nvim_win_set_height(0, 15)
 end, "Terminal")
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc.
 map("<Esc><Esc>", "<C-\\><C-n>", "Exit terminal mode", "t")
 
 -- Lua
