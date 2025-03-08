@@ -1,21 +1,14 @@
 return {
 	{
-		"echasnovski/mini.colors",
-		version = false,
-		opts = {},
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"EdenEast/nightfox.nvim",
 		opts = {
-			flavour = "mocha",
-			styles = {
-				conditionals = {},
+			options = {
+				-- dim_inactive = true,
 			},
 		},
 		config = function(_, opts)
-			require("catppuccin").setup(opts)
-			vim.cmd.colorscheme "catppuccin"
+			require("nightfox").setup(opts)
+			vim.cmd.colorscheme "duskfox"
 		end,
 	},
 }

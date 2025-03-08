@@ -1,5 +1,4 @@
 local icons = require "icons"
-local colors = require "catppuccin.palettes.mocha"
 
 local function get_indent_info()
 	local tabstop = vim.bo.tabstop
@@ -29,7 +28,7 @@ end
 local winbar_sections = {
 	lualine_b = {
 		"%03l/%03L:%03c",
-		{ get_indent_info, color = { fg = colors.text }, padding = { left = 0, right = 1 } },
+		{ get_indent_info, padding = { left = 0, right = 1 } },
 	},
 	lualine_c = {
 		{ "diff", symbols = { added = icons.git.added, modified = icons.git.modified, removed = icons.git.removed } },

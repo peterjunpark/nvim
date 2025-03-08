@@ -8,6 +8,7 @@ return {
 		spec = {
 			{ "<leader>o", group = "Options" },
 			{ "<leader>p", group = "Pick" },
+			{ "<leader>ol", "<cmd>Lazy<CR>", desc = "Lazy" },
 		},
 	},
 }

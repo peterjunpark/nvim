@@ -65,6 +65,6 @@ return {
 			},
 		}
 
-		vim.keymap.set("n", "<leader>e", oil.toggle_float, { desc = "Oil: Current dir" })
+		vim.keymap.set("n", "<leader>e", oil.open, { desc = "Oil: Current dir" })
 	end,
 }

@@ -1,4 +1,5 @@
 local icons = require "icons"
+local duskfox = require("nightfox.palette").load "duskfox"
 
 return {
 	{
@@ -30,18 +31,22 @@ return {
 		end,
 	},
 	{
-		"echasnovski/mini.indentscope",
-		version = false,
+		"nvimdev/indentmini.nvim",
 		opts = {
-			options = {
-				try_as_border = true,
-			},
+			only_current = true,
 		},
+		config = function(_, opts)
+			require("indentmini").setup(opts)
+			vim.cmd.highlight("IndentLine guifg=" .. duskfox.bg2)
+			vim.cmd.highlight("IndentLineCurrent guifg=" .. duskfox.fg3)
+		end,
 	},
 	{
 		"rachartier/tiny-inline-diagnostic.nvim",
 		config = function()
-			require("tiny-inline-diagnostic").setup()
+			require("tiny-inline-diagnostic").setup {
+				preset = "powerline",
+			}
 			vim.diagnostic.config {
 				virtual_text = false,
 				signs = {

@@ -106,13 +106,13 @@ return {
 				clangd = {},
 				cssls = {},
 				esbonio = {},
-				-- gopls = {
-				-- 	settings = {
-				-- 		gopls = {
-				-- 			gofumpt = true,
-				-- 		},
-				-- 	},
-				-- },
+				gopls = {
+					settings = {
+						gopls = {
+							gofumpt = true,
+						},
+					},
+				},
 				-- html = {},
 				-- ts
 				denols = {
@@ -139,6 +139,7 @@ return {
 						},
 					},
 				},
+				["yaml-language-server"] = {},
 			}
 
 			-- You can add other tools here that you want Mason to install
