@@ -1,4 +1,5 @@
 local icons = require "icons"
+local palette = require("nightfox.palette").load "duskfox"
 
 local function get_indent_info()
 	local tabstop = vim.bo.tabstop
@@ -77,9 +78,17 @@ return {
 							return modes[str] or str:sub(1, 3)
 						end
 					end,
+					color = function()
+						if vim.fn.reg_recording() ~= "" then
+							return { bg = palette.red.bright }
+						end
+						-- nil means default color is used.
+					end,
 				},
 			},
-			lualine_b = { "branch" },
+			lualine_b = {
+				"branch",
+			},
 			lualine_c = {
 				function()
 					return vim.fn.getcwd():gsub("^" .. os.getenv "HOME", "~") .. "/"

@@ -11,4 +11,8 @@ return {
 			vim.cmd.colorscheme "duskfox"
 		end,
 	},
+	{
+		"folke/tokyonight.nvim",
+		opts = {},
+	},
 }
