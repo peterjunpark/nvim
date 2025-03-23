@@ -1,5 +1,5 @@
 local icons = require "icons"
-local palette = require("nightfox.palette").load "duskfox"
+local palette = require("tokyonight.colors").setup()
 
 local function get_indent_info()
 	local tabstop = vim.bo.tabstop
@@ -80,7 +80,7 @@ return {
 					end,
 					color = function()
 						if vim.fn.reg_recording() ~= "" then
-							return { bg = palette.red.bright }
+							return { bg = palette.red1 }
 						end
 						-- nil means default color is used.
 					end,

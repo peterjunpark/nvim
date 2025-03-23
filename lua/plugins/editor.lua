@@ -1,5 +1,4 @@
 local icons = require "icons"
-local duskfox = require("nightfox.palette").load "duskfox"
 
 return {
 	{
@@ -37,8 +36,6 @@ return {
 		},
 		config = function(_, opts)
 			require("indentmini").setup(opts)
-			vim.cmd.highlight("IndentLine guifg=" .. duskfox.bg2)
-			vim.cmd.highlight("IndentLineCurrent guifg=" .. duskfox.fg3)
 		end,
 	},
 	{

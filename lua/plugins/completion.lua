@@ -17,10 +17,10 @@ return {
 				nerd_font_variant = "mono",
 			},
 			completion = {
-				menu = { border = "single" },
-				documentation = { window = { border = "single" } },
+				-- menu = { border = "single" },
+				-- documentation = { window = { border = "single" } },
 			},
-			signature = { window = { border = "single" } },
+			-- signature = { window = { border = "single" } },
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {

@@ -1,18 +1,16 @@
 return {
 	{
-		"EdenEast/nightfox.nvim",
+		"folke/tokyonight.nvim",
 		opts = {
-			options = {
-				-- dim_inactive = true,
+			style = "night",
+			styles = {
+				comments = { italic = true },
+				keywords = { italic = false },
 			},
 		},
 		config = function(_, opts)
-			require("nightfox").setup(opts)
-			vim.cmd.colorscheme "duskfox"
+			require("tokyonight").setup(opts)
+			vim.cmd.colorscheme "tokyonight"
 		end,
-	},
-	{
-		"folke/tokyonight.nvim",
-		opts = {},
 	},
 }
