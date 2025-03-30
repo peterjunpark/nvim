@@ -11,20 +11,6 @@ local function get_indent_info()
 	return (expandtab and icons.keys.Space or icons.keys.Tab) .. tabstop
 end
 
-local function get_lsp_client_name()
-	local buf_ft = vim.bo.filetype
-	local clients = vim.lsp.get_clients { bufnr = 0 }
-	if #clients == 0 then
-		return ""
-	end
-	for _, client in ipairs(clients) do
-		if client.config.filetypes and vim.tbl_contains(client.config.filetypes, buf_ft) then
-			return client.name
-		end
-	end
-	return ""
-end
-
 -- Shared winbar sections
 local winbar_sections = {
 	lualine_b = {
@@ -34,7 +20,7 @@ local winbar_sections = {
 	lualine_c = {
 		{ "diff", symbols = { added = icons.git.added, modified = icons.git.modified, removed = icons.git.removed } },
 		"%=",
-		{ get_lsp_client_name, icon = "", padding = { left = 0, right = 1 } },
+		{ "lsp_status", icon = "", padding = { left = 0, right = 1 } },
 		{
 			"diagnostics",
 			symbols = {
@@ -111,7 +97,7 @@ return {
 					symbols = { added = icons.git.added, modified = icons.git.modified, removed = icons.git.removed },
 				},
 				"%=",
-				{ get_lsp_client_name, icon = "", padding = { left = 0, right = 1 } },
+				{ "lsp_status", icon = "", padding = { left = 0, right = 1 } },
 				{
 					"diagnostics",
 					colored = false,
