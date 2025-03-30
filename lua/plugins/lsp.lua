@@ -123,6 +123,7 @@ return {
 					root_dir = nvim_lsp.util.root_pattern "package.json",
 					single_file_support = false,
 				},
+				svelte = {},
 				basedpyright = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				lua_ls = {
