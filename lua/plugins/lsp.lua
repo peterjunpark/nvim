@@ -140,6 +140,7 @@ return {
 						},
 					},
 				},
+				taplo = {}, -- TOML
 				["yaml-language-server"] = {},
 			}
 

@@ -11,14 +11,14 @@ return {
 		{ "<leader>?", function() MiniPick.builtin.help() end, desc = "Pick: Help" },
 		{ "<leader>.", function() MiniPick.builtin.resume() end, desc = "Pick: Resume" },
 		{
-			"<leader>pn",
+			"<leader>sn",
 			function()
 				local opts = { source = { cwd = vim.fn.stdpath "config" } }
 				MiniPick.builtin.files { opts = opts }
 			end,
 			desc = "Pick: Neovim config",
 		},
-		{ "<leader>ph", function() MiniExtra.pickers.hl_groups() end, desc = "Pick: Highlights" },
+		{ "<leader>sh", function() MiniExtra.pickers.hl_groups() end, desc = "Pick: Highlights" },
 	},
 		opts = {},
 	},
