@@ -39,15 +39,6 @@ map("<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 map("<leader>x", vim.diagnostic.setloclist, "Open quickfix list")
 
--- Terminal keymaps
-map("<leader>t", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd "J"
-	vim.api.nvim_win_set_height(0, 15)
-end, "Terminal")
-map("<Esc><Esc>", "<C-\\><C-n>", "Exit terminal mode", "t")
-
 -- Lua
 map("<leader>L", "<cmd>source %<CR>", "Lua: Source file")
 map("<leader>l", ":.lua<CR>", "Lua: Execute line")
