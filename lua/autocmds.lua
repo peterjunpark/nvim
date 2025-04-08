@@ -8,17 +8,32 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+local function is_filetype_excluded()
+	local excluded_filetypes = { "minifiles" }
+	local current_filetype = vim.bo.filetype
+	for _, filetype in ipairs(excluded_filetypes) do
+		if current_filetype == filetype then
+			return true
+		end
+	end
+	return false
+end
+
 -- Turn on relative line numbers in normal mode and off in insert mode
 vim.api.nvim_create_autocmd("InsertEnter", {
 	pattern = "*",
 	callback = function()
-		vim.wo.relativenumber = false
+		if not is_filetype_excluded() then
+			vim.wo.relativenumber = false
+		end
 	end,
 })
 
 vim.api.nvim_create_autocmd("InsertLeave", {
 	pattern = "*",
 	callback = function()
-		vim.wo.relativenumber = true
+		if not is_filetype_excluded() then
+			vim.wo.relativenumber = true
+		end
 	end,
 })
