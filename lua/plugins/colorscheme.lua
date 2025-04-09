@@ -1,16 +1,11 @@
 return {
-	{
-		"folke/tokyonight.nvim",
-		opts = {
-			style = "night",
-			styles = {
-				comments = { italic = true },
-				keywords = { italic = false },
-			},
-		},
-		config = function(_, opts)
-			require("tokyonight").setup(opts)
-			vim.cmd.colorscheme "tokyonight"
-		end,
-	},
+	"projekt0n/github-nvim-theme",
+	name = "github-theme",
+	lazy = false,
+	priority = 1000,
+	opts = {},
+	config = function(_, opts)
+		require("github-theme").setup(opts)
+		vim.cmd.colorscheme "github_dark_dimmed"
+	end,
 }

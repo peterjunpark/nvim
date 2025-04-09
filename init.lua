@@ -34,6 +34,7 @@ vim.opt.rtp:prepend(lazypath)
 require "opts"
 require "keymaps"
 require "autocmds"
+require "custom.terminal"
 
 -- Setup lazy.nvim
 require("lazy").setup {
@@ -42,7 +43,7 @@ require("lazy").setup {
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
-	install = { colorscheme = { "duskfox", "habamax" } },
+	install = { colorscheme = { "github_dark_dimmed" } },
 	-- Automatically check for plugin updates.
 	checker = { enabled = true },
 	ui = {
