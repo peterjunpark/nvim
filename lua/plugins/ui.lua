@@ -5,6 +5,16 @@ return {
 		opts = {},
 	},
 	{
+		"echasnovski/mini.statusline",
+		version = false,
+		opts = {},
+	},
+	{
+		"echasnovski/mini.tabline",
+		version = false,
+		opts = {},
+	},
+	{
 		"echasnovski/mini.notify",
 		version = false,
 		opts = {},
@@ -17,5 +27,12 @@ return {
 			cursor_color = "none",
 			filetypes_disabled = { "ministarter", "oil", "lua" },
 		},
+	},
+	{
+		"goolord/alpha-nvim",
+		dependencies = { "mini.icons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
 	},
 }

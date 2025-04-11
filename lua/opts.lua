@@ -78,3 +78,19 @@ vim.opt.autoread = true
 
 -- Disable Neovim generating a swapfile and showing the error.
 -- vim.opt.swapfile = false
+--
+
+local icons = require "icons"
+
+vim.diagnostic.config {
+	-- virtual_text = { current_line = false },
+	virtual_lines = { current_line = true },
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+			[vim.diagnostic.severity.WARN] = icons.diagnostics.Warn,
+			[vim.diagnostic.severity.INFO] = icons.diagnostics.Info,
+			[vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
+		},
+	},
+}

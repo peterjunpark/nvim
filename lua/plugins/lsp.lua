@@ -152,6 +152,7 @@ return {
 				-- "goimports", -- Sort imports in Go files
 				"black",
 				"stylua", -- Used to format Lua code
+				"prettier",
 			})
 			require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 

@@ -26,6 +26,7 @@ return {
 			go = { "goimports", "gofmt" },
 			fish = { "fish_indent" },
 			sh = { "shfmt" },
+			yaml = { "prettier" },
 		},
 	},
 }

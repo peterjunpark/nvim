@@ -1,5 +1,3 @@
-local icons = require "icons"
-
 return {
 	{
 		"echasnovski/mini.surround",
@@ -32,29 +30,29 @@ return {
 	{
 		"nvimdev/indentmini.nvim",
 		opts = {
-			only_current = true,
+			-- only_current = true,
 		},
 		config = function(_, opts)
 			require("indentmini").setup(opts)
 		end,
 	},
-	{
-		"rachartier/tiny-inline-diagnostic.nvim",
-		config = function()
-			require("tiny-inline-diagnostic").setup {
-				preset = "powerline",
-			}
-			vim.diagnostic.config {
-				virtual_text = false,
-				signs = {
-					text = {
-						[vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
-						[vim.diagnostic.severity.WARN] = icons.diagnostics.Warn,
-						[vim.diagnostic.severity.INFO] = icons.diagnostics.Info,
-						[vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
-					},
-				},
-			}
-		end,
-	},
+	-- {
+	-- 	"rachartier/tiny-inline-diagnostic.nvim",
+	-- 	config = function()
+	-- 		require("tiny-inline-diagnostic").setup {
+	-- 			preset = "powerline",
+	-- 		}
+	-- 		vim.diagnostic.config {
+	-- 			virtual_text = false,
+	-- 			signs = {
+	-- 				text = {
+	-- 					[vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+	-- 					[vim.diagnostic.severity.WARN] = icons.diagnostics.Warn,
+	-- 					[vim.diagnostic.severity.INFO] = icons.diagnostics.Info,
+	-- 					[vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
+	-- 				},
+	-- 			},
+	-- 		}
+	-- 	end,
+	-- },
 }
