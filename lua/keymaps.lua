@@ -18,18 +18,6 @@ map("K", ":m '<-2<CR>gv=gv", "Move line up", "v")
 map("<Tab>", "<cmd>bnext<CR>")
 map("<Backspace>", "<cmd>bprev<CR>")
 
--- Easier window controls
-map("<leader>pv", "<C-w>v", "Vsplit")
-map("<leader>ps", "<C-w>s", "Split")
-map("<leader>pc", "<C-w>c", "Close pane")
-map("<leader>po", "<C-w>o", "Close other panes")
-map("<leader>pp", "<C-w>w", "Switch panes")
-map("<leader>ph", "<C-w>h", "Go to left pane")
-map("<leader>pj", "<C-w>j", "Go to below pane")
-map("<leader>pk", "<C-w>k", "Go to above pane")
-map("<leader>pl", "<C-w>l", "Go to right pane")
-map("<leader>px", "<C-w>x", "Swap current pane with next")
-
 map("g/", "<Esc>/\\%V", "Search inside selection", "x")
 
 -- Clear highlights on search when pressing <Esc> in normal mode
