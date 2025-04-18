@@ -14,7 +14,7 @@ local ensure_installed = {
 	"jq",
 	"jsdoc",
 	"json",
-	"latex",
+	-- "latex",
 	"lua",
 	"luadoc",
 	"luap",

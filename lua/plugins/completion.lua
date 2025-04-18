@@ -9,7 +9,8 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			snippets = { preset = "mini_snippets" },
+			-- TODO
+			-- snippets = { preset = "mini_snippets" },
 			keymap = {
 				preset = "default",
 			},
