@@ -43,7 +43,7 @@ require("lazy").setup {
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
-	install = { colorscheme = { "github_dark_dimmed" } },
+	install = { colorscheme = { "rose-pine" } },
 	-- Automatically check for plugin updates.
 	checker = { enabled = true },
 	ui = {
